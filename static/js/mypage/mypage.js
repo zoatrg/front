@@ -43,10 +43,31 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
 
+        // 3. 개인정보 설정 버튼 클릭 감지
+        const setBtn = target.closest(".profile-setting-content-div");
+        if (setBtn) {
+            openModal("setting-modal");
+            return;
+        }
+
+        // 2. 개인정보 수정 버튼 클릭 감지
+        const editBtn = target.closest(".change");
+        if (editBtn) {
+            openModal("form-modal");
+            return;
+        }
+
         // 3. 닫기 버튼 (X 아이콘)
         const closeBtn = target.closest(".close-modal-btn");
         if (closeBtn) {
             const modalId = closeBtn.getAttribute("data-modal");
+            closeModal(modalId);
+            return;
+        }
+        // 3. 취소 버튼
+        const cancelBtn = target.closest(".cancel-btn");
+        if (cancelBtn) {
+            const modalId = cancelBtn.getAttribute("data-modal");
             closeModal(modalId);
             return;
         }
