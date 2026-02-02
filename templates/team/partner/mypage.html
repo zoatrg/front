@@ -107,7 +107,7 @@
                 </div>
                 <div class="user-content-wrap">
                     <!-- Feed Section for "내 게시물" Tab -->
-                    <div class="feed-container" data-tab="posts" style="display: none;">
+                    <div class="feed-container" data-tab="posts" style="display: block;">
                         <div class="feed-wrapper">
                             <!-- Post 1: SpaceX Starship -->
                             <div class="feed-card">
@@ -382,27 +382,15 @@
                         </div>
                     </div>
                     <!-- Follower Section for "팔로워" Tab -->
-                    <div class="follower-list-section" id="follower-list-section" data-tab="followers"
-                        style="display: none;">
-                        <div class="follower-list-header">
-                            <div class="follower-list-title">
-                                <p class="follower-title-text">관련 사람 4명</p>
-                            </div>
-                            <div class="follower-search-wrap">
-                                <svg aria-label="icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M21 21l-5.2-5.2"></path>
-                                    <circle cx="10" cy="10" r="8" stroke="currentColor" fill="none" stroke-width="2">
-                                    </circle>
-                                </svg>
-                                <input type="text" placeholder="이름, 직명명 검색" class="follower-search-input">
-                            </div>
-                        </div>
-                        <div class="follower-tabs">
-                            <button class="follower-tab active">기업 ·</button>
-                            <button class="follower-tab">개설 ·</button>
-                            <button class="follower-tab">제품 공고 ·</button>
-                            <button class="follower-tab">사람 찾기</button>
-                        </div>
+                    <div class="feed-container" id="follower-list-section" data-tab="followers" style="display: none;">
+                        <div class="feed-wrapper">
+                            <div class="feed-card">
+                                <div class="feed-section">
+                                    <div class="follower-list-header">
+                                        <div class="follower-list-title">
+                                            <p class="follower-title-text">팔로워 목록</p>
+                                        </div>
+                                    </div>
                         <div class="follower-list-content">
                             <!-- 팔로워 아이템 1 -->
                             <div class="follower-item">
@@ -512,9 +500,15 @@
                                 <button class="follower-item-follow-btn">팔로우</button>
                             </div>
                         </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
+            <!-- left-wrap ends -->
+
+            <!-- right-wrap starts here inside bottom-wrap -->
             <div class="right-wrap">
                 <div class="profile-setting">
                     <div class="profile-setting-wrap">
@@ -608,8 +602,12 @@
                     </div>
                 </div>
             </div>
+            <!-- right-wrap ends -->
         </div>
+        <!-- bottom-wrap ends -->
     </div>
+    <!-- wrap ends -->
+
     <!-- Career Modal with Overlay Structure -->
     <div id="career-modal" class="modal-overlay" style="display: none;">
         <div class="modal-container">
